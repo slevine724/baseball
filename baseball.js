@@ -6,6 +6,7 @@ function generateRandomNumber(num) {
     onBase: ['bases are loaded!', 'bases are empty.', 'runner is on third.', 'runner is on second.', 'runner is on first.'],
     hitResult: ['HOME RUN', 'single', 'double', 'triple'],
     crowdReact: ['wild', 'silent', 'crazy', 'home']
+    gameResult: ['You won!', 'You lost!' 'It was the first tie ever!']
     };
     
     let personalResult = [];
@@ -22,6 +23,9 @@ function generateRandomNumber(num) {
                 break
             case 'crowdReact':
                 personalResult.push(`The crowd goes ${allBaseball[key][optionID]}!`)
+                break
+            case 'gameResult':
+                personalResult.push(allBaseball[key][optionID])
         }
     }
     
